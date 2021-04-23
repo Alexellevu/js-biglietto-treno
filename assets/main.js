@@ -4,7 +4,7 @@ console.log(numKm);
 var età = parseInt(prompt('inserisci la tua età'));
 console.log(età);
 
-//calcoliamo i km moltiplicando i km inseriti dall'utente per 0,21.
+//calcoliamo il prezzo moltiplicando i km inseriti dall'utente per 0,21.
 var prezzo = numKm * 0.21;
 console.log(prezzo);
 
@@ -18,6 +18,7 @@ var sconto_anziani = ((prezzo*40)/100);
 var prezzo_anziani = prezzo - sconto_anziani;
 console.log(prezzo_anziani);
 
+//if ed else per stabilire i prezzi in base alle fasce d'età
 if(età < 18){
     console.log(prezzo_min);
     document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo_min + " euro");
