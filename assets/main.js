@@ -8,6 +8,7 @@ console.log(età);
 var prezzo = numKm * 0.21;
 console.log(prezzo);
 
+
 //variabili con lo sconto per i minorenni
 var sconto_min = ((prezzo*20)/100);
 var prezzo_min = prezzo - sconto_min;
@@ -21,14 +22,15 @@ console.log(prezzo_anziani);
 //if ed else per stabilire i prezzi in base alle fasce d'età
 if(età < 18){
     console.log(prezzo_min);
-    document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo_min + " euro");
+    document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo_min.toFixed(2) + " euro");
 }else if(età > 65){
     console.log(prezzo_anziani);
-    document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo_anziani + " euro");
+    document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo_anziani.toFixed(2) + " euro");
 }
     else{console.log(prezzo);
-        document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo + " euro");
+        document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo.toFixed(2) + " euro");
     }
 
+    
 
 
