@@ -18,4 +18,16 @@ var sconto_anziani = ((prezzo*40)/100);
 var prezzo_anziani = prezzo - sconto_anziani;
 console.log(prezzo_anziani);
 
+if(età < 18){
+    console.log(prezzo_min);
+    document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo_min + " euro");
+}else if(età > 65){
+    console.log(prezzo_anziani);
+    document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo_anziani + " euro");
+}
+    else{console.log(prezzo);
+        document.getElementById('prezzo_finale').innerHTML = ("il costo del tuo viaggio sarà " + prezzo + " euro");
+    }
+
+
 
